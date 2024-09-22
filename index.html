@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Live Streaming Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Live Streaming Platform</h1>
-        <button id="shareBtn">Share</button>
+        <button id="shareButton">Share</button>
     </header>
+    
     <main>
-        <div id="liveStream">
-            <h2>Live Stream</h2>
-            <video controls autoplay></video>
+        <div id="videoContainer">
+            <video id="liveStream" controls autoplay></video>
         </div>
-        <div id="editor">
-            <h3>Edit Stream</h3>
-            <textarea placeholder="Write your content..."></textarea>
-            <button id="saveBtn">Save</button>
+        
+        <div id="editorContainer">
+            <textarea id="editor" placeholder="Live stream title..."></textarea>
+            <button id="subscribeButton">Subscribe</button>
+            <button id="likeButton">Like</button>
+            <button id="dislikeButton">Dislike</button>
         </div>
-        <div id="userActions">
-            <button id="likeBtn">Like</button>
-            <button id="dislikeBtn">Dislike</button>
-            <button id="subscribeBtn">Subscribe</button>
-        </div>
-        <div id="account">
-            <h3>Create Account</h3>
+        
+        <div id="accountContainer">
             <input type="email" id="email" placeholder="Enter your email" required>
-            <button id="createAccountBtn">Create Account</button>
+            <button id="createAccountButton">Create Account</button>
         </div>
+        
+        <button id="openCameraButton">Open Camera</button>
     </main>
+    
     <script src="script.js"></script>
 </body>
 </html>
