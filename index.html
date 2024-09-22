@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Live Streaming Website</title>
+</head>
+<body>
+    <header>
+        <h1>Live Streaming Platform</h1>
+        <button id="shareBtn">Share</button>
+    </header>
+    <main>
+        <div id="liveStream">
+            <h2>Live Stream</h2>
+            <video controls autoplay></video>
+        </div>
+        <div id="editor">
+            <h3>Edit Stream</h3>
+            <textarea placeholder="Write your content..."></textarea>
+            <button id="saveBtn">Save</button>
+        </div>
+        <div id="userActions">
+            <button id="likeBtn">Like</button>
+            <button id="dislikeBtn">Dislike</button>
+            <button id="subscribeBtn">Subscribe</button>
+        </div>
+        <div id="account">
+            <h3>Create Account</h3>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button id="createAccountBtn">Create Account</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
