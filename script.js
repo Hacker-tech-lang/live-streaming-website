@@ -1,29 +1,41 @@
-document.getElementById('shareBtn').addEventListener('click', () => {
-    // Logic to share the stream
-    alert('Stream link shared!');
+document.getElementById('shareButton').addEventListener('click', function() {
+    // Share functionality
+    alert('Share this live stream!');
 });
 
-document.getElementById('likeBtn').addEventListener('click', () => {
-    // Logic for liking the stream
-    alert('You liked the stream!');
+document.getElementById('subscribeButton').addEventListener('click', function() {
+    // Subscribe functionality
+    alert('Thank you for subscribing!');
 });
 
-document.getElementById('dislikeBtn').addEventListener('click', () => {
-    // Logic for disliking the stream
-    alert('You disliked the stream!');
+document.getElementById('likeButton').addEventListener('click', function() {
+    // Like functionality
+    alert('You liked this stream!');
 });
 
-document.getElementById('subscribeBtn').addEventListener('click', () => {
-    // Logic for subscribing to the stream
-    alert('You subscribed to the stream!');
+document.getElementById('dislikeButton').addEventListener('click', function() {
+    // Dislike functionality
+    alert('You disliked this stream!');
 });
 
-document.getElementById('createAccountBtn').addEventListener('click', () => {
+document.getElementById('createAccountButton').addEventListener('click', function() {
     const email = document.getElementById('email').value;
     if (email) {
-        // Logic for creating an account
-        alert(`Account created for ${email}!`);
+        alert('Account created with email: ' + email);
     } else {
         alert('Please enter a valid email address.');
     }
+});
+
+document.getElementById('openCameraButton').addEventListener('click', function() {
+    // Open the photo camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            const video = document.getElementById('liveStream');
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(function(error) {
+            console.error('Error accessing the camera: ', error);
+        });
 });
